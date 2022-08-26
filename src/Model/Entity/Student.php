@@ -16,6 +16,9 @@ use Cake\ORM\Entity;
  * @property string|null $phone
  * @property string $email
  * @property string $password
+ *
+ * @property \App\Model\Entity\Award[] $awards
+ * @property \App\Model\Entity\Enrolment[] $enrolments
  */
 class Student extends Entity
 {
@@ -36,6 +39,8 @@ class Student extends Entity
         'phone' => true,
         'email' => true,
         'password' => true,
+        'awards' => true,
+        'enrolments' => true,
     ];
 
     /**

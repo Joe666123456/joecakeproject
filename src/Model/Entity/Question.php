@@ -6,19 +6,18 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Course Entity
+ * Question Entity
  *
  * @property int $id
- * @property string $name
- * @property string|null $description
- * @property string $type
- * @property int $level
+ * @property int $quiz_id
+ * @property string|null $option1
+ * @property string|null $option2
+ * @property string|null $option3
+ * @property string|null $answer
  *
- * @property \App\Model\Entity\Enrolment[] $enrolments
- * @property \App\Model\Entity\Quiz[] $quizzes
- * @property \App\Model\Entity\Record[] $records
+ * @property \App\Model\Entity\Quiz $quiz
  */
-class Course extends Entity
+class Question extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -30,12 +29,11 @@ class Course extends Entity
      * @var array<string, bool>
      */
     protected $_accessible = [
-        'name' => true,
-        'description' => true,
-        'type' => true,
-        'level' => true,
-        'enrolments' => true,
-        'quizzes' => true,
-        'records' => true,
+        'quiz_id' => true,
+        'option1' => true,
+        'option2' => true,
+        'option3' => true,
+        'answer' => true,
+        'quiz' => true,
     ];
 }

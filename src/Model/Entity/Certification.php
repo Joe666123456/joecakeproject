@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property int $quiz_id
  *
  * @property \App\Model\Entity\Quiz $quiz
- * @property \App\Model\Entity\Award[] $award
+ * @property \App\Model\Entity\Award[] $awards
  */
 class Certification extends Entity
 {
@@ -30,6 +30,6 @@ class Certification extends Entity
         'title' => true,
         'quiz_id' => true,
         'quiz' => true,
-        'award' => true,
+        'awards' => true,
     ];
 }
